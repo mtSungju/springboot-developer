@@ -1,4 +1,4 @@
-package me.shinsungyoung.springbootdeveloper;
+package me.shinsungyoung.springbootdeveloper.bak;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package me.shinsungyoung.springbootdeveloper;
+package me.shinsungyoung.springbootdeveloper.bak;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

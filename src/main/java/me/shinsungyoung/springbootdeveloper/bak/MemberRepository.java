@@ -1,4 +1,4 @@
-package me.shinsungyoung.springbootdeveloper;
+package me.shinsungyoung.springbootdeveloper.bak;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
