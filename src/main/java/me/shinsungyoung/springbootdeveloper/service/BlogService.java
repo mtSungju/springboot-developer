@@ -14,6 +14,7 @@ public class BlogService {
     
     // 블로그 글 추가 메서드
     public Article save(AddArticleRequest request){
+
         return blogRepository.save(request.toEntity());
     }
 
