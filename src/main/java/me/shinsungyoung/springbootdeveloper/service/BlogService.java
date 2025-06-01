@@ -6,6 +6,8 @@ import me.shinsungyoung.springbootdeveloper.dto.AddArticleRequest;
 import me.shinsungyoung.springbootdeveloper.repository.BlogRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @RequiredArgsConstructor // final 이나 @NotNull이 붙은 필드의 생성자 추가
 @Service // 빈으로 등록
 public class BlogService {
@@ -18,4 +20,20 @@ public class BlogService {
         return blogRepository.save(request.toEntity());
     }
 
+    public List<Article> findAll(){
+       return blogRepository.findAll();
+    }
+
+    public Article findById(long id){
+
+        return blogRepository.findById(id)
+                .orElseThrow(()->new IllegalArgumentException("not found :" + id));
+
+        //orElseThrow는 Optional의 인자가 null일 경우 예외처리를 시킨다.
+        //JPA에서 findById가 Optional을 반환해서 위처럼 사용하기도 한다.
+    }
+
+    public void delete(long id){
+        blogRepository.deleteById(id);
+    }
 }
