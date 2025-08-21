@@ -11,6 +11,7 @@ public class Main {
     public static void main(String[] args) {
         List<String> fruits = Arrays.asList("apple", "banana", "apple", "orange", "kiwi", "watermelon");
 
+
         // a로 시작하는 과일만 뽑기
         fruits.stream()
                 .filter(fruit -> fruit.startsWith("a"))
@@ -37,5 +38,17 @@ public class Main {
                 .forEach(m ->
                         System.out.println(m.getKey() + " : " + m.getValue())
                 );
+
+
+        map.keySet().stream()
+                .map(m->m.toLowerCase())
+                .forEach(System.out::println);
+
+
+        //System.out.println(map.values());
+
+        map.values().stream()
+                .filter(m->m>1)
+                .forEach(System.out::println);
     }
 }

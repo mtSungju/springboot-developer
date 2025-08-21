@@ -7,9 +7,22 @@ spring:
         format_sql: true
    # 데이블 생성후에 data.sql 실행
     defer-datasource-initialization: true
+
   datasource:
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    driver-class-name: org.postgresql.Driver
+#    username: postgres
+#    password: '0706'
     url: jdbc:h2:mem:testdb
 
   h2:
     console:
       enabled: true
+
+#  mybatis:
+#    mapper-locations: classpath:mapper/*.xml
+#
+#    configuration:
+#      map-underscore-to-camel-case: true
+#      default-fetch-size: 100
+#      default-statement-timeout: 30

@@ -5,6 +5,7 @@ import me.shinsungyoung.springbootdeveloper.domain.Article;
 import me.shinsungyoung.springbootdeveloper.dto.AddArticleRequest;
 import me.shinsungyoung.springbootdeveloper.dto.UpdateArticleRequest;
 import me.shinsungyoung.springbootdeveloper.repository.BlogRepository;
+import me.shinsungyoung.springbootdeveloper.repository.CommonRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,6 +16,7 @@ import java.util.List;
 public class BlogService {
 
     private final BlogRepository blogRepository;
+    private final CommonRepository commonRepository;
     
     // 블로그 글 추가 메서드
     public Article save(AddArticleRequest request){
